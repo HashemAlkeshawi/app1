@@ -1,6 +1,6 @@
 import 'dart:async';
 
-class Teacher extends Comparable {
+class Teacher {
   late String fName;
   late String lName;
   late double salary;
@@ -8,8 +8,8 @@ class Teacher extends Comparable {
   Teacher(this.fName, this.lName, this.salary);
 
   @override
-  int compareTo(other) {
-    // TODO: implement compareTo
-    throw UnimplementedError();
+  bool operator ==(t) {
+    t as Teacher;
+    return (t.fName == fName && t.lName == lName && t.salary == salary);
   }
 }
