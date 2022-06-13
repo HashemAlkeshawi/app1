@@ -9,8 +9,9 @@ class Teacher {
 
   @override
   bool operator ==(t) {
-    t as Teacher;
-
-    return (t.fName == fName && t.lName == lName && t.salary == salary);
+    return (t is Teacher &&
+        t.fName == fName &&
+        t.lName == lName &&
+        t.salary == salary);
   }
 }
