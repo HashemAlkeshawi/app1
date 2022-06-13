@@ -1,5 +1,3 @@
-import 'package:app1/app1.dart' as app1;
-
 import 'Person.dart';
 import 'Student.dart';
 import 'Teacher.dart';
