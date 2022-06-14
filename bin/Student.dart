@@ -1,8 +1,9 @@
+import 'ManagmentClass.dart';
 import 'Person.dart';
 
 enum Level { first, second, third, fourth, fifth }
 
-class Student extends Person {
+class Student extends Person with ManagementClass {
   //extends Person {
   late double gpa;
   late Level level;
