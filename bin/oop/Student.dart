@@ -1,9 +1,9 @@
-import 'oop/ManagmentClass.dart';
+import 'ManagmentClass.dart';
 import 'Person.dart';
 
 enum Level { first, second, third, fourth, fifth }
 
-class Student extends Person with ManagementClass {
+class Student extends Person implements ManagementClass {
   //extends Person {
   late double gpa;
   late Level level;
@@ -42,10 +42,19 @@ class Student extends Person with ManagementClass {
                     : Level.fifth;
   }
 
+  // @override
+  // Map<String, dynamic> toMap() {
+  //   return {...super.toMap(), "gpa": gpa, "level": level};
+  // }
+
   @override
-  Map<String, dynamic> toMap() {
-    return {...super.toMap(), "gpa": gpa, "level": level};
-  }
+  String? dummy1;
+
+  @override
+  String? dummy2;
+
+  @override
+  String? dummy3;
 
   // getHomework();
 }
