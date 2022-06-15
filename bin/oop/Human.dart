@@ -1,6 +1,6 @@
 import 'GeneralClass.dart';
 
-class Human extends GeneralClass with GeneralClass2 implements GeneralClass {
+class Human extends GeneralClass with GeneralClass2 {
   @override
   double? age2;
 

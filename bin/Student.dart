@@ -47,5 +47,14 @@ class Student extends Person with ManagementClass {
     return {...super.toMap(), "gpa": gpa, "level": level};
   }
 
+  @override
+  bool operator >(Object o) {
+    return o is Student && this.ageInYears > o.ageInYears;
+  }
   // getHomework();
+
+  @override
+  bool operator <(Object o) {
+    return o is Student && this.ageInYears < o.ageInYears;
+  }
 }
