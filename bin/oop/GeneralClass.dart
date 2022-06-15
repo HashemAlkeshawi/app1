@@ -6,8 +6,6 @@ class GeneralClass {
   setAge(int ageInMonths) {
     age = ageInMonths / 12;
   }
-
-  GeneralClass(this.age, this.isMale, this.name) {}
 }
 
 class GeneralClass2 {
