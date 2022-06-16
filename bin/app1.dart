@@ -2,8 +2,23 @@ import 'Person.dart';
 import 'Student.dart';
 import 'Teacher.dart';
 import 'dummy_data.dart';
+import 'exception/GSG_EXCEPTION.dart';
 
 void main(List<String> arguments) {
+  int multiply(int a, int b) {
+    if (a < 0 || b < 0) {
+      throw MyException();
+    }
+    return a * b;
+  }
+
+  try {
+    print(multiply(1, 2));
+    print(multiply(-1, 2));
+  } catch (e) {
+    print(e.toString());
+  }
+
   // print('Hello world!');
 
   Teacher teacher1 = Teacher("hashem", "qishawi", 0);
@@ -22,7 +37,7 @@ void main(List<String> arguments) {
       Student("Hashem", "Alkeshawi", Gender.male, 2, 82.4, Level.second);
   s2.ageInYears = 11;
 
-  print(divisionProccess(6, 99));
+  // print(divisionProccess(6, 99));
 
   // print(s1 < s2);
 
@@ -41,19 +56,23 @@ void main(List<String> arguments) {
 
   // Map<String, dynamic> m = PersonsList[2].toMap();
 
-  List<Student> studentsList = students.map((e) => Student.fromMap(e)).toList();
+  // List<Student> studentsList = students.map((e) => Student.fromMap(e)).toList();
 
   // print(studentsList[1].fName.toString());
 }
 
-int divisionProccess(int a, int b) {
-  try {
-    return a ~/ b;
-  } on IntegerDivisionByZeroException {
-    print("can not divid by zero");
-    return 0;
-  } catch (e) {
-    print("Unkow exception");
-    return 0;
-  }
-}
+// int divisionProccess(int a, int b) {
+//   if (b == 0) {
+//     throw GSGException();
+//   }
+
+//   try {
+//     return a ~/ b;
+//   } on IntegerDivisionByZeroException {
+//     print("can not divid by zero");
+//     return 0;
+//   } catch (e) {
+//     print("Unkow exception");
+//     return 0;
+//   }
+// }
