@@ -52,7 +52,11 @@ void main(List<String> arguments) {
 
   // Person person3 = Person.fromMap(persons[2]);
 
-  // List<Person> PersonsList = persons.map((e) => Person.fromMap(e)).toList();
+  // List<Person> PersonsList = persons.map((e){
+  //  return (
+  //    Person.fromMap(e)).toList()
+  //  );
+  // }
 
   // Map<String, dynamic> m = PersonsList[2].toMap();
 
